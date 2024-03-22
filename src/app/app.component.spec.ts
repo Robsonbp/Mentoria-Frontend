@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'mentoria-frontend'`, () => {
+  it(`should have as title 'app-cliente-novo'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('mentoria-frontend');
+    expect(app.title).toEqual('app-cliente-novo');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, mentoria-frontend');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, app-cliente-novo');
   });
 });

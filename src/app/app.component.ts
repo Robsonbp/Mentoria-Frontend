@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PessoaService } from './services/pessoa.service';
-import { Pessoa } from './models/pessoa';
-import { NgForm } from '@angular/forms';
+import { Cliente } from './cliente/model/cliente';
+import { ClienteService } from './cliente/service/cliente.service';
 
 @Component({
   selector: 'app-root',
@@ -9,21 +8,9 @@ import { NgForm } from '@angular/forms';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit{
-  title = 'mentoria-frontend';
-
-  pessoa = {} as Pessoa;
-  pessoas: Pessoa[];
-
-  constructor(private pessoaService: PessoaService) {}
-  
-  ngOnInit() {
-    this.getPessoas();
-  }
-
-  // Chama o serviço para obtém todos os carros
-  getPessoas() {
-    this.pessoaService.getPessoas().subscribe((pessoas: Pessoa[]) => {
-      this.pessoas = pessoas;
-    });
+  title = 'app-cliente-novo';
+ 
+  ngOnInit(): void {
+    console.log("Antes")
   }
 }
